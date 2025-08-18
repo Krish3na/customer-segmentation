@@ -1,0 +1,3 @@
+cluster,recency_mean,recency_std,frequency_mean,frequency_std,monetary_mean,monetary_sum,RFM_score_mean
+0,245.64,162.15,2.64,0.95,562.44,156358.32,6.21
+1,101.81,92.8,5.27,1.28,1410.98,311827.06,11.98

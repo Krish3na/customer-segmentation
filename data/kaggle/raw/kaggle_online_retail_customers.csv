@@ -1,0 +1,501 @@
+CustomerID,Country
+CUST_00001,United Kingdom
+CUST_00002,Belgium
+CUST_00003,France
+CUST_00004,United Kingdom
+CUST_00005,United Kingdom
+CUST_00006,United Kingdom
+CUST_00007,United Kingdom
+CUST_00008,Spain
+CUST_00009,Germany
+CUST_00010,France
+CUST_00011,United Kingdom
+CUST_00012,Belgium
+CUST_00013,Spain
+CUST_00014,United Kingdom
+CUST_00015,United Kingdom
+CUST_00016,United Kingdom
+CUST_00017,United Kingdom
+CUST_00018,United Kingdom
+CUST_00019,United Kingdom
+CUST_00020,United Kingdom
+CUST_00021,Germany
+CUST_00022,United Kingdom
+CUST_00023,United Kingdom
+CUST_00024,United Kingdom
+CUST_00025,United Kingdom
+CUST_00026,France
+CUST_00027,United Kingdom
+CUST_00028,United Kingdom
+CUST_00029,United Kingdom
+CUST_00030,United Kingdom
+CUST_00031,Germany
+CUST_00032,United Kingdom
+CUST_00033,United Kingdom
+CUST_00034,Netherlands
+CUST_00035,Belgium
+CUST_00036,Spain
+CUST_00037,United Kingdom
+CUST_00038,United Kingdom
+CUST_00039,Germany
+CUST_00040,United Kingdom
+CUST_00041,United Kingdom
+CUST_00042,United Kingdom
+CUST_00043,United Kingdom
+CUST_00044,Netherlands
+CUST_00045,United Kingdom
+CUST_00046,Germany
+CUST_00047,United Kingdom
+CUST_00048,United Kingdom
+CUST_00049,United Kingdom
+CUST_00050,United Kingdom
+CUST_00051,Belgium
+CUST_00052,France
+CUST_00053,Netherlands
+CUST_00054,Spain
+CUST_00055,United Kingdom
+CUST_00056,Netherlands
+CUST_00057,United Kingdom
+CUST_00058,United Kingdom
+CUST_00059,United Kingdom
+CUST_00060,United Kingdom
+CUST_00061,United Kingdom
+CUST_00062,United Kingdom
+CUST_00063,Spain
+CUST_00064,United Kingdom
+CUST_00065,United Kingdom
+CUST_00066,United Kingdom
+CUST_00067,United Kingdom
+CUST_00068,Spain
+CUST_00069,United Kingdom
+CUST_00070,Switzerland
+CUST_00071,France
+CUST_00072,United Kingdom
+CUST_00073,United Kingdom
+CUST_00074,Spain
+CUST_00075,France
+CUST_00076,France
+CUST_00077,France
+CUST_00078,United Kingdom
+CUST_00079,United Kingdom
+CUST_00080,United Kingdom
+CUST_00081,Spain
+CUST_00082,Germany
+CUST_00083,United Kingdom
+CUST_00084,United Kingdom
+CUST_00085,United Kingdom
+CUST_00086,United Kingdom
+CUST_00087,France
+CUST_00088,Germany
+CUST_00089,Spain
+CUST_00090,United Kingdom
+CUST_00091,United Kingdom
+CUST_00092,France
+CUST_00093,France
+CUST_00094,United Kingdom
+CUST_00095,France
+CUST_00096,United Kingdom
+CUST_00097,United Kingdom
+CUST_00098,United Kingdom
+CUST_00099,United Kingdom
+CUST_00100,United Kingdom
+CUST_00101,United Kingdom
+CUST_00102,Germany
+CUST_00103,United Kingdom
+CUST_00104,United Kingdom
+CUST_00105,Netherlands
+CUST_00106,United Kingdom
+CUST_00107,United Kingdom
+CUST_00108,France
+CUST_00109,United Kingdom
+CUST_00110,United Kingdom
+CUST_00111,United Kingdom
+CUST_00112,United Kingdom
+CUST_00113,Netherlands
+CUST_00114,Spain
+CUST_00115,Germany
+CUST_00116,Spain
+CUST_00117,Spain
+CUST_00118,United Kingdom
+CUST_00119,Spain
+CUST_00120,United Kingdom
+CUST_00121,Spain
+CUST_00122,Spain
+CUST_00123,United Kingdom
+CUST_00124,United Kingdom
+CUST_00125,United Kingdom
+CUST_00126,United Kingdom
+CUST_00127,Spain
+CUST_00128,Spain
+CUST_00129,United Kingdom
+CUST_00130,United Kingdom
+CUST_00131,United Kingdom
+CUST_00132,United Kingdom
+CUST_00133,United Kingdom
+CUST_00134,United Kingdom
+CUST_00135,Netherlands
+CUST_00136,United Kingdom
+CUST_00137,United Kingdom
+CUST_00138,France
+CUST_00139,United Kingdom
+CUST_00140,Belgium
+CUST_00141,Belgium
+CUST_00142,United Kingdom
+CUST_00143,United Kingdom
+CUST_00144,United Kingdom
+CUST_00145,United Kingdom
+CUST_00146,United Kingdom
+CUST_00147,Germany
+CUST_00148,United Kingdom
+CUST_00149,United Kingdom
+CUST_00150,United Kingdom
+CUST_00151,Netherlands
+CUST_00152,United Kingdom
+CUST_00153,United Kingdom
+CUST_00154,United Kingdom
+CUST_00155,Switzerland
+CUST_00156,United Kingdom
+CUST_00157,Germany
+CUST_00158,France
+CUST_00159,United Kingdom
+CUST_00160,France
+CUST_00161,United Kingdom
+CUST_00162,Germany
+CUST_00163,Germany
+CUST_00164,United Kingdom
+CUST_00165,United Kingdom
+CUST_00166,Spain
+CUST_00167,United Kingdom
+CUST_00168,United Kingdom
+CUST_00169,United Kingdom
+CUST_00170,United Kingdom
+CUST_00171,Germany
+CUST_00172,United Kingdom
+CUST_00173,United Kingdom
+CUST_00174,United Kingdom
+CUST_00175,Germany
+CUST_00176,United Kingdom
+CUST_00177,Germany
+CUST_00178,United Kingdom
+CUST_00179,Netherlands
+CUST_00180,United Kingdom
+CUST_00181,United Kingdom
+CUST_00182,United Kingdom
+CUST_00183,Netherlands
+CUST_00184,Spain
+CUST_00185,United Kingdom
+CUST_00186,Germany
+CUST_00187,Spain
+CUST_00188,United Kingdom
+CUST_00189,United Kingdom
+CUST_00190,United Kingdom
+CUST_00191,United Kingdom
+CUST_00192,Spain
+CUST_00193,Netherlands
+CUST_00194,Germany
+CUST_00195,United Kingdom
+CUST_00196,United Kingdom
+CUST_00197,France
+CUST_00198,Spain
+CUST_00199,Spain
+CUST_00200,France
+CUST_00201,Germany
+CUST_00202,United Kingdom
+CUST_00203,United Kingdom
+CUST_00204,Spain
+CUST_00205,Germany
+CUST_00206,United Kingdom
+CUST_00207,United Kingdom
+CUST_00208,Germany
+CUST_00209,United Kingdom
+CUST_00210,United Kingdom
+CUST_00211,United Kingdom
+CUST_00212,Germany
+CUST_00213,Germany
+CUST_00214,United Kingdom
+CUST_00215,France
+CUST_00216,United Kingdom
+CUST_00217,United Kingdom
+CUST_00218,France
+CUST_00219,Germany
+CUST_00220,Spain
+CUST_00221,Germany
+CUST_00222,United Kingdom
+CUST_00223,United Kingdom
+CUST_00224,United Kingdom
+CUST_00225,United Kingdom
+CUST_00226,United Kingdom
+CUST_00227,Belgium
+CUST_00228,United Kingdom
+CUST_00229,Spain
+CUST_00230,Germany
+CUST_00231,France
+CUST_00232,United Kingdom
+CUST_00233,United Kingdom
+CUST_00234,United Kingdom
+CUST_00235,United Kingdom
+CUST_00236,France
+CUST_00237,United Kingdom
+CUST_00238,United Kingdom
+CUST_00239,Germany
+CUST_00240,United Kingdom
+CUST_00241,Netherlands
+CUST_00242,Belgium
+CUST_00243,Netherlands
+CUST_00244,United Kingdom
+CUST_00245,United Kingdom
+CUST_00246,Netherlands
+CUST_00247,United Kingdom
+CUST_00248,Belgium
+CUST_00249,Belgium
+CUST_00250,Spain
+CUST_00251,United Kingdom
+CUST_00252,United Kingdom
+CUST_00253,Spain
+CUST_00254,United Kingdom
+CUST_00255,United Kingdom
+CUST_00256,United Kingdom
+CUST_00257,Netherlands
+CUST_00258,Germany
+CUST_00259,United Kingdom
+CUST_00260,United Kingdom
+CUST_00261,Germany
+CUST_00262,Switzerland
+CUST_00263,United Kingdom
+CUST_00264,United Kingdom
+CUST_00265,Spain
+CUST_00266,France
+CUST_00267,Germany
+CUST_00268,France
+CUST_00269,United Kingdom
+CUST_00270,United Kingdom
+CUST_00271,Spain
+CUST_00272,Spain
+CUST_00273,Spain
+CUST_00274,Netherlands
+CUST_00275,United Kingdom
+CUST_00276,United Kingdom
+CUST_00277,France
+CUST_00278,Germany
+CUST_00279,France
+CUST_00280,France
+CUST_00281,Spain
+CUST_00282,United Kingdom
+CUST_00283,United Kingdom
+CUST_00284,United Kingdom
+CUST_00285,United Kingdom
+CUST_00286,United Kingdom
+CUST_00287,United Kingdom
+CUST_00288,United Kingdom
+CUST_00289,United Kingdom
+CUST_00290,United Kingdom
+CUST_00291,United Kingdom
+CUST_00292,United Kingdom
+CUST_00293,Spain
+CUST_00294,United Kingdom
+CUST_00295,United Kingdom
+CUST_00296,United Kingdom
+CUST_00297,France
+CUST_00298,United Kingdom
+CUST_00299,Germany
+CUST_00300,United Kingdom
+CUST_00301,United Kingdom
+CUST_00302,United Kingdom
+CUST_00303,United Kingdom
+CUST_00304,Germany
+CUST_00305,France
+CUST_00306,Belgium
+CUST_00307,United Kingdom
+CUST_00308,United Kingdom
+CUST_00309,France
+CUST_00310,United Kingdom
+CUST_00311,United Kingdom
+CUST_00312,United Kingdom
+CUST_00313,United Kingdom
+CUST_00314,Belgium
+CUST_00315,Spain
+CUST_00316,Germany
+CUST_00317,United Kingdom
+CUST_00318,United Kingdom
+CUST_00319,United Kingdom
+CUST_00320,United Kingdom
+CUST_00321,United Kingdom
+CUST_00322,France
+CUST_00323,Germany
+CUST_00324,United Kingdom
+CUST_00325,Belgium
+CUST_00326,France
+CUST_00327,United Kingdom
+CUST_00328,Germany
+CUST_00329,United Kingdom
+CUST_00330,United Kingdom
+CUST_00331,United Kingdom
+CUST_00332,France
+CUST_00333,United Kingdom
+CUST_00334,United Kingdom
+CUST_00335,United Kingdom
+CUST_00336,United Kingdom
+CUST_00337,Spain
+CUST_00338,France
+CUST_00339,United Kingdom
+CUST_00340,United Kingdom
+CUST_00341,United Kingdom
+CUST_00342,United Kingdom
+CUST_00343,United Kingdom
+CUST_00344,United Kingdom
+CUST_00345,United Kingdom
+CUST_00346,Germany
+CUST_00347,Germany
+CUST_00348,United Kingdom
+CUST_00349,United Kingdom
+CUST_00350,Germany
+CUST_00351,United Kingdom
+CUST_00352,Spain
+CUST_00353,Germany
+CUST_00354,United Kingdom
+CUST_00355,United Kingdom
+CUST_00356,Germany
+CUST_00357,United Kingdom
+CUST_00358,United Kingdom
+CUST_00359,Netherlands
+CUST_00360,United Kingdom
+CUST_00361,United Kingdom
+CUST_00362,Germany
+CUST_00363,United Kingdom
+CUST_00364,United Kingdom
+CUST_00365,Netherlands
+CUST_00366,United Kingdom
+CUST_00367,Belgium
+CUST_00368,Netherlands
+CUST_00369,United Kingdom
+CUST_00370,United Kingdom
+CUST_00371,United Kingdom
+CUST_00372,United Kingdom
+CUST_00373,United Kingdom
+CUST_00374,Germany
+CUST_00375,United Kingdom
+CUST_00376,United Kingdom
+CUST_00377,Spain
+CUST_00378,United Kingdom
+CUST_00379,Spain
+CUST_00380,United Kingdom
+CUST_00381,United Kingdom
+CUST_00382,Germany
+CUST_00383,Germany
+CUST_00384,Spain
+CUST_00385,France
+CUST_00386,Spain
+CUST_00387,United Kingdom
+CUST_00388,United Kingdom
+CUST_00389,France
+CUST_00390,Spain
+CUST_00391,Switzerland
+CUST_00392,United Kingdom
+CUST_00393,United Kingdom
+CUST_00394,France
+CUST_00395,United Kingdom
+CUST_00396,Netherlands
+CUST_00397,Spain
+CUST_00398,United Kingdom
+CUST_00399,France
+CUST_00400,France
+CUST_00401,United Kingdom
+CUST_00402,Netherlands
+CUST_00403,United Kingdom
+CUST_00404,Spain
+CUST_00405,United Kingdom
+CUST_00406,Spain
+CUST_00407,United Kingdom
+CUST_00408,United Kingdom
+CUST_00409,Netherlands
+CUST_00410,United Kingdom
+CUST_00411,United Kingdom
+CUST_00412,Belgium
+CUST_00413,Belgium
+CUST_00414,United Kingdom
+CUST_00415,Germany
+CUST_00416,United Kingdom
+CUST_00417,United Kingdom
+CUST_00418,United Kingdom
+CUST_00419,Germany
+CUST_00420,France
+CUST_00421,France
+CUST_00422,France
+CUST_00423,United Kingdom
+CUST_00424,United Kingdom
+CUST_00425,United Kingdom
+CUST_00426,United Kingdom
+CUST_00427,United Kingdom
+CUST_00428,Spain
+CUST_00429,United Kingdom
+CUST_00430,United Kingdom
+CUST_00431,United Kingdom
+CUST_00432,France
+CUST_00433,Germany
+CUST_00434,United Kingdom
+CUST_00435,United Kingdom
+CUST_00436,France
+CUST_00437,United Kingdom
+CUST_00438,Spain
+CUST_00439,France
+CUST_00440,United Kingdom
+CUST_00441,United Kingdom
+CUST_00442,Switzerland
+CUST_00443,United Kingdom
+CUST_00444,United Kingdom
+CUST_00445,Spain
+CUST_00446,Netherlands
+CUST_00447,Switzerland
+CUST_00448,France
+CUST_00449,United Kingdom
+CUST_00450,United Kingdom
+CUST_00451,France
+CUST_00452,United Kingdom
+CUST_00453,United Kingdom
+CUST_00454,Netherlands
+CUST_00455,United Kingdom
+CUST_00456,United Kingdom
+CUST_00457,United Kingdom
+CUST_00458,United Kingdom
+CUST_00459,United Kingdom
+CUST_00460,United Kingdom
+CUST_00461,United Kingdom
+CUST_00462,Germany
+CUST_00463,France
+CUST_00464,United Kingdom
+CUST_00465,Belgium
+CUST_00466,United Kingdom
+CUST_00467,United Kingdom
+CUST_00468,Spain
+CUST_00469,United Kingdom
+CUST_00470,Belgium
+CUST_00471,United Kingdom
+CUST_00472,Belgium
+CUST_00473,United Kingdom
+CUST_00474,Spain
+CUST_00475,United Kingdom
+CUST_00476,Switzerland
+CUST_00477,United Kingdom
+CUST_00478,United Kingdom
+CUST_00479,Belgium
+CUST_00480,United Kingdom
+CUST_00481,Germany
+CUST_00482,Germany
+CUST_00483,United Kingdom
+CUST_00484,Germany
+CUST_00485,United Kingdom
+CUST_00486,Netherlands
+CUST_00487,United Kingdom
+CUST_00488,United Kingdom
+CUST_00489,Belgium
+CUST_00490,Spain
+CUST_00491,United Kingdom
+CUST_00492,Germany
+CUST_00493,United Kingdom
+CUST_00494,United Kingdom
+CUST_00495,United Kingdom
+CUST_00496,United Kingdom
+CUST_00497,United Kingdom
+CUST_00498,United Kingdom
+CUST_00499,Belgium
+CUST_00500,Switzerland

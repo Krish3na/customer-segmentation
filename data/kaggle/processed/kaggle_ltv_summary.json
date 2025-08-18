@@ -1,0 +1,11 @@
+{
+    "dataset_type": "online_retail",
+    "total_customers": 499,
+    "best_model": "Linear Regression",
+    "best_r2_score": 0.9501109615181051,
+    "best_rmse": 1883.2740973603848,
+    "best_mae": 1426.3397820275472,
+    "avg_ltv": 13423.660282394405,
+    "total_predicted_ltv": 6698406.480914808,
+    "avg_ltv_accuracy": 0.8814484708786402
+}

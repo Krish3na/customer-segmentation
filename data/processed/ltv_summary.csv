@@ -1,0 +1,2 @@
+best_model,total_customers,avg_predicted_ltv,avg_actual_ltv,avg_prediction_error,avg_prediction_error_pct,total_predicted_value,total_actual_value
+Linear Regression,1000,508.58391556370975,516.8717833888888,265.3646800510982,inf,508583.91556370974,516871.78338888887
