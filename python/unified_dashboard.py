@@ -14,6 +14,8 @@ from plotly.subplots import make_subplots
 import os
 import sys
 from datetime import datetime
+import psutil
+import gc
 
 # Page configuration
 st.set_page_config(
@@ -143,11 +145,32 @@ def create_metric_card(value, label, prefix="", suffix=""):
     </div>
     """, unsafe_allow_html=True)
 
+def optimize_dataframe(df, max_rows=10000):
+    """Optimize dataframe for better performance"""
+    if len(df) > max_rows:
+        return df.sample(max_rows, random_state=42)
+    return df
+
+def create_optimized_chart(fig, height=400, show_modebar=False):
+    """Create optimized plotly chart with performance settings"""
+    fig.update_layout(
+        height=height,
+        margin=dict(l=20, r=20, t=40, b=20),
+        showlegend=True
+    )
+    return st.plotly_chart(
+        fig, 
+        use_container_width=True, 
+        config={'displayModeBar': show_modebar}
+    )
+
+@st.cache_data(ttl=3600)  # Cache for 1 hour
 def load_synthetic_data():
-    """Load synthetic dataset"""
+    """Load synthetic dataset with caching for better performance"""
     try:
-        customers = pd.read_csv('data/raw/customers_large.csv')
-        transactions = pd.read_csv('data/raw/transactions_large.csv')
+        # Load only essential columns to reduce memory usage
+        customers = pd.read_csv('data/raw/customers_large.csv', usecols=['CustomerID', 'Age', 'Gender', 'Annual_Income_k'])
+        transactions = pd.read_csv('data/raw/transactions_large.csv', usecols=['CustomerID', 'TransactionDate', 'TotalAmount'])
         rfm_data = pd.read_csv('data/processed/rfm_scores.csv')
         customer_segments = pd.read_csv('data/processed/customer_segments.csv')
         clustering_data = pd.read_csv('data/processed/customer_clusters.csv')
@@ -167,11 +190,13 @@ def load_synthetic_data():
         st.info("Please run the synthetic data analysis scripts first.")
         return None
 
+@st.cache_data(ttl=3600)  # Cache for 1 hour
 def load_kaggle_data():
-    """Load Kaggle dataset"""
+    """Load Kaggle dataset with caching for better performance"""
     try:
-        customers = pd.read_csv('data/kaggle/raw/kaggle_retail_customers.csv')
-        transactions = pd.read_csv('data/kaggle/raw/kaggle_retail_transactions.csv')
+        # Load only essential columns to reduce memory usage
+        customers = pd.read_csv('data/kaggle/raw/kaggle_retail_customers.csv', usecols=['CustomerID', 'Age', 'Gender', 'Annual_Income_k'])
+        transactions = pd.read_csv('data/kaggle/raw/kaggle_retail_transactions.csv', usecols=['CustomerID', 'TransactionDate', 'TotalAmount'])
         rfm_data = pd.read_csv('data/kaggle/processed/kaggle_rfm_scores.csv')
         customer_segments = pd.read_csv('data/kaggle/processed/kaggle_customer_segments.csv')
         clustering_data = pd.read_csv('data/kaggle/processed/kaggle_customer_clusters.csv')
@@ -229,28 +254,26 @@ def show_executive_summary(data):
         title="Customer Distribution by Segment",
         color_discrete_sequence=px.colors.qualitative.Set3
     )
-    fig.update_layout(height=400, showlegend=True)
-    st.plotly_chart(fig, use_container_width=True)
+    create_optimized_chart(fig, height=400, show_modebar=False)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # LTV distribution
+    # LTV distribution with sampling for large datasets
     st.markdown('<div class="chart-container">', unsafe_allow_html=True)
     st.subheader("💰 Predicted LTV Distribution")
     
+    # Sample data if too large for better performance
+    ltv_sample = data['ltv_data'].sample(min(1000, len(data['ltv_data'])), random_state=42)
+    
     fig = px.histogram(
-        data['ltv_data'], 
+        ltv_sample, 
         x='predicted_ltv',
         nbins=30,
         title="Distribution of Predicted LTV",
         labels={'predicted_ltv': 'Predicted LTV ($)', 'count': 'Number of Customers'},
         color_discrete_sequence=['#667eea']
     )
-    fig.update_layout(
-        height=400,
-        bargap=0.1,
-        bargroupgap=0.05
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    fig.update_layout(bargap=0.1, bargroupgap=0.05)
+    create_optimized_chart(fig, height=400, show_modebar=False)
     st.markdown('</div>', unsafe_allow_html=True)
 
 def show_rfm_analysis(data):
@@ -691,7 +714,10 @@ def show_data_overview(data):
         st.markdown('</div>', unsafe_allow_html=True)
 
 def main():
-    """Main dashboard function"""
+    """Main dashboard function with performance optimizations"""
+    
+    # Add performance monitoring
+    start_time = datetime.now()
     
     # Sidebar for dataset selection
     st.sidebar.title("📋 Dataset Selection")
@@ -701,19 +727,34 @@ def main():
         index=0
     )
     
-    # Load data based on selection
-    if dataset_choice == "Synthetic Dataset":
-        data = load_synthetic_data()
-        if data:
-            st.sidebar.success("✅ Loaded: Synthetic Dataset")
-    else:
-        data = load_kaggle_data()
-        if data:
-            st.sidebar.success("✅ Loaded: Kaggle Dataset")
+    # Show loading spinner
+    with st.spinner("🔄 Loading dataset..."):
+        # Load data based on selection
+        if dataset_choice == "Synthetic Dataset":
+            data = load_synthetic_data()
+            if data:
+                st.sidebar.success("✅ Loaded: Synthetic Dataset")
+        else:
+            data = load_kaggle_data()
+            if data:
+                st.sidebar.success("✅ Loaded: Kaggle Dataset")
     
     if data is None:
         st.error("❌ Failed to load data. Please ensure the selected dataset files are available.")
         st.stop()
+    
+    # Show loading time and system info
+    load_time = (datetime.now() - start_time).total_seconds()
+    st.sidebar.info(f"⏱️ Load time: {load_time:.2f}s")
+    
+    # Show system performance info
+    memory_usage = psutil.virtual_memory().percent
+    cpu_usage = psutil.cpu_percent()
+    st.sidebar.metric("💾 Memory Usage", f"{memory_usage:.1f}%")
+    st.sidebar.metric("🖥️ CPU Usage", f"{cpu_usage:.1f}%")
+    
+    # Force garbage collection for better memory management
+    gc.collect()
     
     # Horizontal Navigation Tabs
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([

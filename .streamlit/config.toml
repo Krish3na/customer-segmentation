@@ -1,0 +1,26 @@
+[global]
+# Performance optimizations
+developmentMode = false
+enableCaching = true
+enableStaticServing = true
+
+[server]
+# Server configuration for deployment
+headless = true
+port = 8501
+maxUploadSize = 200
+enableCORS = false
+enableXsrfProtection = false
+
+[browser]
+# Browser settings
+gatherUsageStats = false
+serverAddress = "localhost"
+serverPort = 8501
+
+[theme]
+# Custom theme for better performance
+primaryColor = "#667eea"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#262730"

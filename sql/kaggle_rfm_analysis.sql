@@ -4,7 +4,7 @@
 -- 1. CUSTOMER DEMOGRAPHICS ANALYSIS
 -- =================================
 
--- Customer age distribution
+-- Customer age distribution (Optimized)
 SELECT 
     CASE 
         WHEN age < 25 THEN '18-24'
@@ -14,17 +14,17 @@ SELECT
         WHEN age >= 55 THEN '55+'
     END as age_group,
     COUNT(*) as customer_count,
-    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) as percentage
+    ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM kaggle_customers WHERE age IS NOT NULL), 2) as percentage
 FROM kaggle_customers 
 WHERE age IS NOT NULL
 GROUP BY age_group
 ORDER BY age_group;
 
--- Gender distribution
+-- Gender distribution (Optimized)
 SELECT 
     gender,
     COUNT(*) as customer_count,
-    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) as percentage
+    ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM kaggle_customers WHERE gender IS NOT NULL), 2) as percentage
 FROM kaggle_customers 
 WHERE gender IS NOT NULL
 GROUP BY gender
