@@ -1,8 +1,6 @@
 [global]
 # Performance optimizations
 developmentMode = false
-enableCaching = true
-enableStaticServing = true
 
 [server]
 # Server configuration for deployment
