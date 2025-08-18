@@ -164,7 +164,7 @@ def create_optimized_chart(fig, height=400, show_modebar=False):
         config={'displayModeBar': show_modebar}
     )
 
-@st.cache_data(ttl=3600)  # Cache for 1 hour
+@st.cache_data(ttl=300)  # Cache for 5 minutes to allow for updates
 def load_synthetic_data():
     """Load synthetic dataset with caching for better performance"""
     try:
@@ -190,7 +190,7 @@ def load_synthetic_data():
         st.info("Please run the synthetic data analysis scripts first.")
         return None
 
-@st.cache_data(ttl=3600)  # Cache for 1 hour
+@st.cache_data(ttl=300)  # Cache for 5 minutes to allow for updates
 def load_kaggle_data():
     """Load Kaggle dataset with caching for better performance"""
     try:
@@ -718,6 +718,11 @@ def show_data_overview(data):
 def main():
     """Main dashboard function with performance optimizations"""
     
+    # Clear cache if needed
+    if st.sidebar.button("🔄 Refresh Data Cache"):
+        st.cache_data.clear()
+        st.success("✅ Cache cleared! Data will reload.")
+    
     # Add performance monitoring
     start_time = datetime.now()
     
@@ -748,6 +753,14 @@ def main():
     # Show loading time and system info
     load_time = (datetime.now() - start_time).total_seconds()
     st.sidebar.info(f"⏱️ Load time: {load_time:.2f}s")
+    
+    # Show data verification
+    if data:
+        st.sidebar.markdown("---")
+        st.sidebar.markdown("📊 **Data Verification:**")
+        st.sidebar.markdown(f"• RFM Customers: {len(data['rfm_data']):,}")
+        st.sidebar.markdown(f"• LTV Customers: {len(data['ltv_data']):,}")
+        st.sidebar.markdown(f"• Total Transactions: {len(data['transactions']):,}")
     
     # Show system performance info
     memory_usage = psutil.virtual_memory().percent
