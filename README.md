@@ -2,6 +2,10 @@
 
 A comprehensive data science project that performs customer segmentation using RFM analysis and K-Means clustering, predicts customer lifetime value using machine learning, and provides interactive dashboards for business insights.
 
+## 🌐 Live App
+
+The dashboard is deployed on Streamlit Cloud here: [Customer Analytics Dashboard](https://customer-segmentation-npdhp866irddywfojzltec.streamlit.app/)
+
 ## 📊 Project Overview
 
 This project demonstrates end-to-end customer analytics including:
