@@ -227,7 +227,7 @@ def show_executive_summary(data):
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        # Use processed data for accurate customer count
+        # Use RFM data for accurate customer count (not LTV data which might be sampled)
         total_customers = len(data['rfm_data'])
         create_metric_card(f"{total_customers:,}", "Total Customers")
     
