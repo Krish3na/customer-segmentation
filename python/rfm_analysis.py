@@ -17,12 +17,12 @@ def load_data():
     print("Loading customer and transaction data...")
     
     try:
-        customers_df = pd.read_csv('../data/raw/customers.csv')
-        transactions_df = pd.read_csv('../data/raw/transactions.csv')
+        customers_df = pd.read_csv('data/raw/customers_large.csv')
+        transactions_df = pd.read_csv('data/raw/transactions_large.csv')
         print(f"Loaded {len(customers_df)} customers and {len(transactions_df)} transactions")
         return customers_df, transactions_df
     except FileNotFoundError:
-        print("Error: Data files not found. Please run data_generation.py first.")
+        print("Error: Data files not found. Please run simple_large_data_generation.py first.")
         return None, None
 
 def calculate_rfm_scores(transactions_df, analysis_date=None):

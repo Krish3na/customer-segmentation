@@ -17,13 +17,13 @@ def load_data():
     print("Loading customer data and RFM scores...")
     
     try:
-        customers_df = pd.read_csv('../data/raw/customers.csv')
-        transactions_df = pd.read_csv('../data/raw/transactions.csv')
+        customers_df = pd.read_csv('data/raw/customers_large.csv')
+        transactions_df = pd.read_csv('data/raw/transactions_large.csv')
         rfm_scores_df = pd.read_csv('data/processed/rfm_scores.csv')
         print(f"Loaded {len(customers_df)} customers, {len(transactions_df)} transactions, and RFM scores")
         return customers_df, transactions_df, rfm_scores_df
     except FileNotFoundError as e:
-        print(f"Error: Data files not found. Please run data generation and RFM analysis first. {e}")
+        print(f"Error: Data files not found. Please run simple_large_data_generation.py and rfm_analysis.py first. {e}")
         return None, None, None
 
 def prepare_features(customers_df, transactions_df, rfm_scores_df):

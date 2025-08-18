@@ -21,14 +21,14 @@ def load_data():
     print("Loading data for LTV prediction...")
     
     try:
-        customers_df = pd.read_csv('../data/raw/customers.csv')
-        transactions_df = pd.read_csv('../data/raw/transactions.csv')
+        customers_df = pd.read_csv('data/raw/customers_large.csv')
+        transactions_df = pd.read_csv('data/raw/transactions_large.csv')
         rfm_scores_df = pd.read_csv('data/processed/rfm_scores.csv')
         customer_clusters_df = pd.read_csv('data/processed/customer_clusters.csv')
         print(f"Loaded {len(customers_df)} customers with RFM scores and cluster assignments")
         return customers_df, transactions_df, rfm_scores_df, customer_clusters_df
     except FileNotFoundError as e:
-        print(f"Error: Data files not found. Please run previous scripts first. {e}")
+        print(f"Error: Data files not found. Please run simple_large_data_generation.py, rfm_analysis.py, and simple_clustering.py first. {e}")
         return None, None, None, None
 
 def calculate_ltv_target(transactions_df, customers_df, prediction_horizon_days=365):
