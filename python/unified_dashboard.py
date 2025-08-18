@@ -169,8 +169,8 @@ def load_synthetic_data():
     """Load synthetic dataset with caching for better performance"""
     try:
         # Load only essential columns to reduce memory usage
-        customers = pd.read_csv('data/raw/customers_large.csv', usecols=['CustomerID', 'Age', 'Gender', 'Annual_Income_k'])
-        transactions = pd.read_csv('data/raw/transactions_large.csv', usecols=['CustomerID', 'TransactionDate', 'TotalAmount'])
+        customers = pd.read_csv('data/raw/customers_large.csv', usecols=['customer_id', 'age', 'gender'])
+        transactions = pd.read_csv('data/raw/transactions_large.csv', usecols=['customer_id', 'transaction_date', 'total_amount'])
         rfm_data = pd.read_csv('data/processed/rfm_scores.csv')
         customer_segments = pd.read_csv('data/processed/customer_segments.csv')
         clustering_data = pd.read_csv('data/processed/customer_clusters.csv')
@@ -679,7 +679,7 @@ def show_data_overview(data):
     st.markdown('</div>', unsafe_allow_html=True)
     
     # Customer demographics (if available)
-    if 'Age' in data['customers'].columns:
+    if 'age' in data['customers'].columns or 'Age' in data['customers'].columns:
         st.markdown('<div class="chart-container">', unsafe_allow_html=True)
         st.subheader("👥 Customer Demographics")
         
@@ -687,12 +687,13 @@ def show_data_overview(data):
         
         with col1:
             # Age distribution
+            age_col = 'age' if 'age' in data['customers'].columns else 'Age'
             fig = px.histogram(
                 data['customers'],
-                x='Age',
+                x=age_col,
                 nbins=20,
                 title="Age Distribution",
-                labels={'Age': 'Age', 'count': 'Number of Customers'},
+                labels={age_col: 'Age', 'count': 'Number of Customers'},
                 color_discrete_sequence=['#667eea']
             )
             fig.update_layout(height=300, bargap=0.1)
@@ -700,8 +701,9 @@ def show_data_overview(data):
         
         with col2:
             # Gender distribution (if available)
-            if 'Gender' in data['customers'].columns:
-                gender_counts = data['customers']['Gender'].value_counts()
+            gender_col = 'gender' if 'gender' in data['customers'].columns else 'Gender'
+            if gender_col in data['customers'].columns:
+                gender_counts = data['customers'][gender_col].value_counts()
                 fig = px.pie(
                     values=gender_counts.values,
                     names=gender_counts.index,
