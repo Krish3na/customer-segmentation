@@ -6,32 +6,6 @@ A comprehensive customer analytics platform that leverages RFM analysis, machine
 
 **[Customer Analytics Dashboard](https://customer-segmentation-npdhp866irddywfojzltec.streamlit.app/)**
 
-## Screenshots
-
-### Executive Summary Dashboard
-![Executive Summary](screenshots/01_executive_summary_dashboard.png)
-*Main dashboard showing key business metrics, customer segment distribution, and revenue analysis for 49,852 customers*
-
-### RFM Analysis
-![RFM Analysis](screenshots/02_rfm_analysis.png)
-*Recency, Frequency, Monetary score distributions and customer segment breakdown with 3D visualization capabilities*
-
-### Customer Segmentation
-![Customer Segmentation](screenshots/03_customer_segmentation.png)
-*K-means clustering results showing cluster distribution, revenue contribution, and customer behavior patterns*
-
-### LTV Prediction
-![LTV Prediction](screenshots/04_customer_ltv_prediction.png)
-*Machine learning model performance comparison and predicted lifetime value distribution analysis*
-
-### Dataset Toggle Feature
-![Dataset Toggle](screenshots/05_toggle_dataset.png)
-*Seamless switching between synthetic dataset (50,000 customers) and Kaggle-style dataset (500 customers)*
-
-### Interactive 3D Visualization
-![Interactive 3D Plot](screenshots/06_interactive_3dplot.png)
-*Interactive 3D RFM visualization allowing real-time exploration of customer segments in three-dimensional space*
-
 ## Problem Statement
 
 Businesses struggle with understanding customer behavior patterns and predicting future value. Traditional segmentation methods lack precision, and manual analysis doesn't scale. This project addresses these challenges by implementing data-driven customer segmentation and predictive analytics.
@@ -88,11 +62,17 @@ Raw Data → Data Validation → Feature Engineering → RFM Scoring → Cluster
 - Revenue analysis by segment
 - LTV prediction overview
 
+![Executive Summary](screenshots/01_executive_summary_dashboard.png)
+*Main dashboard showing key business metrics, customer segment distribution, and revenue analysis for 49,852 customers*
+
 ### RFM Analysis
 - Recency, Frequency, Monetary distributions
 - Customer segment breakdown
 - 3D visualization of RFM scores
 - Segment-specific insights
+
+![RFM Analysis](screenshots/02_rfm_analysis.png)
+*Recency, Frequency, Monetary score distributions and customer segment breakdown with 3D visualization capabilities*
 
 ### Customer Segmentation
 - Cluster analysis and characteristics
@@ -100,11 +80,17 @@ Raw Data → Data Validation → Feature Engineering → RFM Scoring → Cluster
 - Customer behavior patterns
 - Cluster optimization metrics
 
+![Customer Segmentation](screenshots/03_customer_segmentation.png)
+*K-means clustering results showing cluster distribution, revenue contribution, and customer behavior patterns*
+
 ### LTV Prediction
 - Predicted lifetime value distribution
 - Model performance comparison
 - LTV vs RFM relationship analysis
 - Customer value forecasting
+
+![LTV Prediction](screenshots/04_customer_ltv_prediction.png)
+*Machine learning model performance comparison and predicted lifetime value distribution analysis*
 
 ### Marketing Insights
 - Segment-specific recommendations
@@ -117,6 +103,17 @@ Raw Data → Data Validation → Feature Engineering → RFM Scoring → Cluster
 - Customer demographics analysis
 - Missing value analysis
 - Data validation metrics
+
+### Interactive Features
+- Seamless dataset switching between synthetic (50,000 customers) and Kaggle-style (500 customers) datasets
+- Real-time 3D visualization for RFM analysis
+- Interactive charts with hover effects and dynamic filtering
+
+![Dataset Toggle](screenshots/05_toggle_dataset.png)
+*Seamless switching between synthetic dataset and Kaggle-style dataset*
+
+![Interactive 3D Plot](screenshots/06_interactive_3dplot.png)
+*Interactive 3D RFM visualization allowing real-time exploration of customer segments*
 
 ## Project Structure
 
