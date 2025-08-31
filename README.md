@@ -6,6 +6,32 @@ A comprehensive customer analytics platform that leverages RFM analysis, machine
 
 **[Customer Analytics Dashboard](https://customer-segmentation-npdhp866irddywfojzltec.streamlit.app/)**
 
+## Screenshots
+
+### Executive Summary Dashboard
+![Executive Summary](screenshots/01_executive_summary_dashboard.png)
+*Main dashboard showing key business metrics, customer segment distribution, and revenue analysis for 49,852 customers*
+
+### RFM Analysis
+![RFM Analysis](screenshots/02_rfm_analysis.png)
+*Recency, Frequency, Monetary score distributions and customer segment breakdown with 3D visualization capabilities*
+
+### Customer Segmentation
+![Customer Segmentation](screenshots/03_customer_segmentation.png)
+*K-means clustering results showing cluster distribution, revenue contribution, and customer behavior patterns*
+
+### LTV Prediction
+![LTV Prediction](screenshots/04_customer_ltv_prediction.png)
+*Machine learning model performance comparison and predicted lifetime value distribution analysis*
+
+### Dataset Toggle Feature
+![Dataset Toggle](screenshots/05_toggle_dataset.png)
+*Seamless switching between synthetic dataset (50,000 customers) and Kaggle-style dataset (500 customers)*
+
+### Interactive 3D Visualization
+![Interactive 3D Plot](screenshots/06_interactive_3dplot.png)
+*Interactive 3D RFM visualization allowing real-time exploration of customer segments in three-dimensional space*
+
 ## Problem Statement
 
 Businesses struggle with understanding customer behavior patterns and predicting future value. Traditional segmentation methods lack precision, and manual analysis doesn't scale. This project addresses these challenges by implementing data-driven customer segmentation and predictive analytics.
@@ -104,24 +130,46 @@ CustomerSegmentation/
 │   ├── kaggle_data_processor.py     # Kaggle dataset processing
 │   └── requirements.txt             # Python dependencies
 ├── sql/
-│   ├── setup_database.sql           # Database schema
-│   ├── rfm_analysis.sql             # RFM SQL queries
-│   └── kaggle_rfm_analysis.sql      # Kaggle dataset queries
+│   ├── setup_database.sql           # Database schema for synthetic data
+│   ├── rfm_analysis.sql             # RFM analysis queries for synthetic data
+│   ├── setup_kaggle_database.sql    # Database schema for Kaggle dataset
+│   └── kaggle_rfm_analysis.sql      # RFM analysis queries for Kaggle dataset
 ├── data/
 │   ├── raw/                         # Source datasets
 │   └── processed/                   # Analysis outputs
+├── screenshots/                     # Dashboard screenshots
 └── .streamlit/                      # Streamlit configuration
 ```
 
 ## SQL Analytics
 
-The SQL component provides comprehensive business intelligence:
+The SQL component provides comprehensive business intelligence through four main scripts:
 
-- **Customer Demographics**: Age, gender, location analysis
-- **Transaction Patterns**: Purchase frequency, amounts, seasonality
-- **RFM Scoring**: Automated customer segmentation
-- **Segment Analysis**: Revenue, retention, behavior metrics
-- **Performance Optimization**: Query optimization for large datasets
+### Database Setup Scripts
+- **`setup_database.sql`**: Creates tables and imports synthetic customer data (50,000 customers)
+- **`setup_kaggle_database.sql`**: Sets up schema for Kaggle-style e-commerce dataset (500 customers)
+
+### Analysis Scripts
+- **`rfm_analysis.sql`**: Comprehensive RFM analysis for synthetic dataset including:
+  - Customer demographics analysis (age groups, gender distribution)
+  - Transaction patterns and purchase frequency
+  - RFM scoring and customer segmentation
+  - Revenue analysis by segment
+  - Performance metrics and business insights
+
+- **`kaggle_rfm_analysis.sql`**: Specialized analysis for Kaggle dataset featuring:
+  - E-commerce specific metrics
+  - Product category analysis
+  - Customer behavior patterns
+  - Optimized queries for smaller dataset performance
+
+### Key SQL Features
+- **Customer Demographics**: Age, gender, location analysis with percentage calculations
+- **Transaction Patterns**: Purchase frequency, amounts, seasonality analysis
+- **RFM Scoring**: Automated customer segmentation with recency, frequency, monetary metrics
+- **Segment Analysis**: Revenue, retention, behavior metrics by customer segment
+- **Performance Optimization**: Query optimization using subqueries instead of window functions
+- **Business Intelligence**: Revenue opportunities, customer insights, performance metrics
 
 ## Implementation
 
@@ -144,8 +192,13 @@ streamlit run python/unified_dashboard.py
 
 ### Database Setup
 ```bash
+# For synthetic dataset
 psql -f sql/setup_database.sql
 psql -f sql/rfm_analysis.sql
+
+# For Kaggle dataset
+psql -f sql/setup_kaggle_database.sql
+psql -f sql/kaggle_rfm_analysis.sql
 ```
 
 ## Key Insights
